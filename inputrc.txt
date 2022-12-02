@@ -1,0 +1,3 @@
+# ~/.inputrc で保存
+# bashで大文字小文字を無視して補完
+set completion-ignore-case on

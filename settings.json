@@ -1,0 +1,168 @@
+{
+    "$comment_editor": "_____editor_____",
+    "editor.fontSize": 16,
+    "editor.fontFamily": "HackGen",
+    "editor.fontWeight": "bold",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true,
+    "editor.suggestSelection": "first",
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "editor.codeLens": false,
+    "editor.columnSelection": false,
+    "editor.lineHeight": 20,
+    "$comment_terminal": "_____termianl_____",
+    "terminal.integrated.fontFamily": "HackGen",
+    "terminal.external.osxExec": "terminal.app",
+    "terminal.integrated.fontWeight": "bold",
+    "terminal.integrated.fontSize": 16,
+    "$comment_gen": "_____general_____",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "$comment_other": "_____others_____",
+    "kite.showWelcomeNotificationOnStartup": false,
+    "extensions.ignoreRecommendations": true,
+    "$comment_CR": "_____CodeRunner_____",
+    "$arge1: Compiler": "g++, clang++, cv2, at_c, at_g | gcc, clang",
+    "$arge2: Debug": "true, false",
+    "$arge3: isRun": "true, false",
+    "code-runner.executorMap": {
+        "cpp": "~/Settings/vsc_run/cpp.sh clang++ true true",
+        "c": "~/Settings/vsc_run/c.sh clang true true",
+    },
+    "$comment_rust": "_____rust_____",
+    "$comment_python": "_____python_____",
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "$comment_cpp/c": "_____cpp/c_____",
+    "[cpp]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "[c]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "C_Cpp.updateChannel": "Insiders",
+    "code-runner.runInTerminal": true,
+    "C_Cpp.autoAddFileAssociations": false,
+    "C_Cpp.clang_format_style": "{BasedOnStyle: Mozilla, IndentWidth: 4, ColumnLimit: 0, BreakBeforeBraces: Allman}",
+    "$memo": "↑{BasedOnStyle: LLVM, IndentWidth: 4, ColumnLimit: 0, BreakBeforeBraces: Attach} 行末に{}",
+    "$comment_shellscript": "_____ShellScript_____",
+    "[shellscript]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "shakram02.bash-beautify"
+    },
+    "$comment_tex": "_____TeX/LaTeX_____",
+    "[tex]": {
+        // スニペット補完中にも補完を使えるようにする
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        // インデント幅を2にする
+        "editor.tabSize": 2
+    },
+    "[latex]": {
+        // スニペット補完中にも補完を使えるようにする
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        // インデント幅を2にする
+        "editor.tabSize": 2
+    },
+    // 使用パッケージのコマンドや環境の補完を有効にする
+    "latex-workshop.intellisense.package.enabled": true,
+    // 生成ファイルを "out" ディレクトリに吐き出す
+    // "latex-workshop.latex.outDir": "out",
+    // ビルドのレシピ
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "ptex2pdf",
+            "tools": [
+                "ptex2pdf"
+            ]
+        },
+    ],
+    // ビルドのレシピに使われるパーツ
+    "latex-workshop.latex.tools": [
+        {
+            "name": "ptex2pdf",
+            "command": "ptex2pdf",
+            "args": [
+                "-l",
+                "-ot '-synctex=1 -file-line-error'",
+                "%DOC%"
+            ],
+        },
+    ],
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.view.pdf.viewer": "tab",
+    // preview: command + option + v
+    "$comment_ruby": "_____Ruby_____",
+    "[ruby]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+    },
+    "$comment_perl": "_____Perl_____",
+    "[perl]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+    },
+    "$comment_java": "_____Java_____",
+    "[java]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+    },
+    "$comment_js": "_____JavaScript_____",
+    "[javascript]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+    },
+    "$comment_html": "_____HTML_____",
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "$comment_arduino": "_____arduino_____",
+    "arduino.path": "/Applications/Arduino.app",
+    "arduino.commandPath": "Contents/MacOS/Arduino",
+    "arduino.additionalUrls": [
+        "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+    ],
+    "arduino.logLevel": "info",
+    "arduino.enableUSBDetection": true,
+    "arduino.disableTestingOpen": false,
+    "arduino.skipHeaderProvider": false,
+    "arduino.ignoreBoards": [
+        "WeMos D1"
+    ],
+    "python.showStartPage": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "python.languageServer": "Default",
+    "terminal.integrated.inheritEnv": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "cmake.configureOnOpen": true,
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "$comment_julia": "_____julia_____",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+    "$comment_rust": "_____rust_____",
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "workbench.colorTheme": "Iceberg",
+}
