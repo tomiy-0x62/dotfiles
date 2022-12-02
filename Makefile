@@ -9,51 +9,38 @@ PATH2HOME := $(shell echo ~)
 
 vim: ## set up vim
 	@echo "<<< vim >>>"
-	@echo "ln -s $(PATH2HOME)/Settings/Vim/dot_vim $(PATH2HOME)/.vim"
+	@echo "ln -s $(PATH2HOME)/.dotfiles/Vim/dot_vim $(PATH2HOME)/.vim"
 	@echo "mkdir -p $(PATH2HOME)/.config"
-	@echo "ln -s $(PATH2HOME)/Settings/Vim/dot_vim $(PATH2HOME)/.config/nvim"
-	@echo "ln -s $(PATH2HOME)/Settings/Vim/dot_vim/init.vim $(PATH2HOME)/.vimrc"
-	@echo "ln -s $(PATH2HOME)/Settings/Vim/dein $(PATH2HOME)/.dein"
+	@echo "ln -s $(PATH2HOME)/.dotfiles/Vim/dot_vim $(PATH2HOME)/.config/nvim"
+	@echo "ln -s $(PATH2HOME)/.dotfiles/Vim/dot_vim/init.vim $(PATH2HOME)/.vimrc"
+	@echo "ln -s $(PATH2HOME)/.dotfiles/Vim/dein $(PATH2HOME)/.dein"
 	@echo ''
 
 
-tmux: ## put symlink of "Settings/tmux/tmux.conf" to "~/.tmux.conf"
+tmux: ## put symlink of ".dotfiles/tmux/tmux.conf" to "~/.tmux.conf"
 	@echo "<<< tmux >>>"
-	@echo "ln -s $(PATH2HOME)/Settings/tmux/tmux.conf $(PATH2HOME)/.tmux.conf"
+	@echo "ln -s $(PATH2HOME)/.dotfiles/tmux.conf $(PATH2HOME)/.tmux.conf"
 	@echo ''
 
 alacritty: ## print "ln" command option to setup alacritty
 	@echo "<<< alacritty >>>"
-	@echo "Option: create new setting file"
-	@echo "cp ~/Settings/alacritty/alacritty_template.yml ~/Settings/alacritty/alacritty_{os_name}.yml"
-	@echo ''
-	@echo "ln -s $(PATH2HOME)/Settings/alacritty/alacritty_{os_name}.yml $(PATH2HOME)/.alacritty.yml"
-	@echo "{os_name}"
-	@ls $(PATH2HOME)/Settings/alacritty | sed -e 's/alacritty_//g' | sed -e 's/.yml//g'
+	@echo "ln -s $(PATH2HOME)/.dotfiles/alacritty_linux.yml $(PATH2HOME)/.alacritty.yml"
 	@echo ''
 
-bash: make_hostname_dir.sh ## put symlink of Settings/
+bash: ## put symlink of .dotfiles/
 	@echo "<<< bash >>>"
-	@echo "ln -s $(PATH2HOME)/Settings/Shell/inputrc.txt $(PATH2HOME)/.inputrc"
-	@./make_hostname_dir.sh
-	@echo "ln -s $(PATH2HOME)/Settings/Shell/$(HOSTNAME)/bashrc.bash $(PATH2HOME)/.bashrc"
+	@echo "echo 'HOSTCOLOR=\"255;255;255\"' >> $(PATH2HOME)/.bashrc"
+	@echo "ln -s $(PATH2HOME)/.dotfiles/inputrc.txt $(PATH2HOME)/.inputrc"
+	@echo "echo 'source $(PATH2HOME)/.dotfiles/bashrc_common.bash' >> $(PATH2HOME)/.bashrc"
 	@echo ''
 
-zsh: make_hostname_dir.sh ## set up zsh
+zsh: ## set up zsh
 	@echo "<<< zsh >>>"
-	@./make_hostname_dir.sh
-	@echo "ln -s $(PATH2HOME)/Settings/Shell/$(HOSTNAME)/zshrc.zsh $(PATH2HOME)/.zshrc"
+	@echo "echo 'HOSTCOLOR=\"255;255;255\"' >> $(PATH2HOME)/.zshrc"
+	@echo "echo 'source $(PATH2HOME)/.dotfiles/zshrc_common.zsh' >> $(PATH2HOME)/.zshrc"
 	@echo ""
 	@echo ''
 
-fish: make_hostname_dir.sh ## set up fish
-	@echo "<<< fish >>>"
-	@./make_hostname_dir.sh
-	@mkdir -p $(PATH2HOME)/.config
-	@mkdir -p $(PATH2HOME)/.config/fish
-	@echo "ln -s $(PATH2HOME)/Settings/Shell/$(HOSTNAME)/config.fish $(PATH2HOME)/.config/fish/config.fish"
-	@echo ""
-	@echo ''
 
 help: ## Print this help
 	@echo 'Usage: make [target]'
