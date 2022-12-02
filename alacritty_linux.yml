@@ -1,0 +1,57 @@
+font:
+  size: 12.0
+  normal: 
+    family: HackGen Console NF
+    style: Bold
+  borld: 
+    family: HackGen Console NF
+    style: Bold
+  italic:
+    family: HackGen Console NF
+    style: Bold
+
+shell:
+  program: /usr/bin/bash
+  args:
+    - -l
+    - -c
+    - "/usr/bin/tmux -u"
+    # - "/usr/bin/tmux a -t 0 || /usr/bin/tmux -u"
+
+key_bindings:
+    - { key: V, mods: Super, action: Paste }
+    - { key: C, mods: Super, action: Copy  }
+
+#env:
+#    TERM: alacritty
+
+window:
+    opacity: 0.85
+
+colors:
+  # Default colors
+  primary:
+    background: '0x171821'
+    foreground: '0xc5c8c6'
+
+  # Normal colors
+  normal:
+    black:   '0x282a2e'
+    red:     '0xa54242'
+    green:   '0x8c9440'
+    yellow:  '0xde935f'
+    blue:    '0x5f819d'
+    magenta: '0x85678f'
+    cyan:    '0x5e8d87'
+    white:   '0x707880'
+
+  # Bright colors
+  bright:
+    black:   '0x373b41'
+    red:     '0xcc6666'
+    green:   '0xb5bd68'
+    yellow:  '0xf0c674'
+    blue:    '0x81a2be'
+    magenta: '0xb294bb'
+    cyan:    '0x8abeb7'
+    white:   '0xc5c8c6'

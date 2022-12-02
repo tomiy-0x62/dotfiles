@@ -1,0 +1,61 @@
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+    set updatetime=100
+    set signcolumn=yes
+    let g:gitgutter_async = 1
+    let g:gitgutter_sign_modified = '~'
+    highlight GitGutterAdd ctermfg=green
+    highlight GitGutterChange ctermfg=yellow
+    highlight GitGutterDelete ctermfg=red
+    highlight GitGutterChangeDelete ctermfg=yellow
+    highlight SignColumn ctermbg=brown
+'''
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+hook_add = '''
+    let g:rustfmt_autosave = 1
+'''
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter' 
+
+[[plugins]]
+repo = 'lukas-reineke/indent-blankline.nvim'
+hook_add = '''
+lua << EOF
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    show_current_context = true,
+    show_current_context_start = true,
+}
+EOF
+'''
+
+# [[plugins]]
+# repo = 'neovim/nvim-lspconfig'
+# hook_add = '''
+# lua << EOF
+# local nvim_lsp = require('lspconfig')
+# local on_attach = function(client, bufnr)
+#   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+#   -- See `:help vim.lsp.*` for documentation on any of the below functions
+#   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+#   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+# end
+
+# local servers = { 'rust_analyzer' }
+# '''
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+hook_add = '''
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+'''
+
