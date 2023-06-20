@@ -24,7 +24,7 @@ tmux: ## put symlink of ".dotfiles/tmux/tmux.conf" to "~/.tmux.conf"
 
 alacritty: ## print "ln" command option to setup alacritty
 	@echo "<<< alacritty >>>"
-	@echo "ln -s $(PATH2HOME)/.dotfiles/alacritty_linux.yml $(PATH2HOME)/.alacritty.yml"
+	@echo "ln -s $(PATH2HOME)/.dotfiles/alacritty_linux.toml $(PATH2HOME)/.alacritty.toml"
 	@echo ''
 
 bash: ## put symlink of .dotfiles/
@@ -40,6 +40,12 @@ zsh: ## set up zsh
 	@echo "echo 'source $(PATH2HOME)/.dotfiles/zshrc_common.zsh' >> $(PATH2HOME)/.zshrc"
 	@echo ""
 	@echo ''
+
+vscode: ## set up vscode
+	@echo "<<< vscode >>>"
+	@echo "-- linux --"
+	@echo "rm -rf $(PATH2HOME)/.config/Code/User/settings.json"
+	@echo "ln -s $(PATH2HOME)/.dotfiles/settings.json $(PATH2HOME)/.config/Code/User/settings.json"
 
 
 help: ## Print this help

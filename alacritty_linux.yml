@@ -1,13 +1,16 @@
 font:
-  size: 12.0
+  size: 15.0
   normal: 
-    family: HackGen Console NF
+    # family: HackGen Console NF
+    family: Cica
     style: Bold
   borld: 
-    family: HackGen Console NF
+    # family: HackGen Console NF
+    family: Cica
     style: Bold
   italic:
-    family: HackGen Console NF
+    # family: HackGen Console NF
+    family: Cica
     style: Bold
 
 shell:
@@ -26,7 +29,7 @@ key_bindings:
 #    TERM: alacritty
 
 window:
-    opacity: 0.85
+    opacity: 1.0
 
 colors:
   # Default colors
