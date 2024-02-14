@@ -21,7 +21,7 @@ if !isdirectory(expand("$HOME/.vim/undodir"))
     call mkdir(expand("$HOME/.vim/undodir"), "p")
 endif
 set list
-set listchars=tab:»-
+set listchars=tab:»-,eol:↲
 set hlsearch
 set incsearch
 " filetypeによって設定を変える
@@ -150,6 +150,8 @@ function! MakeTabLine()
   let info = 'vim@' . hostname  " show whatever you want
   return tabpages . '%=%#TabLine#' . info  " show tab lists on leftside, informations on rightside
 endfunction
+
+autocmd BufNew * tab ba
 
 if $TMUX != ""
     augroup titlesettings
