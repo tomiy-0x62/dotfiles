@@ -31,8 +31,6 @@ function fish_prompt --description 'Informative prompt'
         set light_blue 63F8F8
         set pink FF517D
 
-        echo ""
-
         # Data
         set_color $blue
         printf  "[%s]\n" (date "+%H:%M:%S")
